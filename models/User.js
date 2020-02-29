@@ -42,13 +42,6 @@ const UserSchema = new Schema({
     minlength: [8, "Password minimal 6 karakter"],
     required: [true, "Password harus diisi"]
   },
-  contacts: [
-    {
-      type: mongoose.Schema.Types.ObjectId,
-      required: true,
-      ref: this.Schema
-    }
-  ]
 });
 
 module.exports = User = mongoose.model("user", UserSchema);
